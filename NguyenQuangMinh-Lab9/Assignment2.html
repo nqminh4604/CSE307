@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 2</title>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		main {
+			display: flex;
+			justify-content: center;
+		}
+
+		.header {
+			background-color: #659FF7;
+			width: 350px;
+			justify-content: center;
+			text-align: center;
+		}
+
+		.title {
+			color: white;
+			font-size: 25px;
+			display: block;
+			padding: 10px;
+		}
+
+		.text-bar {
+			display: flex;
+			padding: 10px;
+		}
+
+		.text {
+			display: inline-block;
+			width: 80%;
+			border: none;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		.add {
+			box-sizing: border-box;
+			display: inline-block;
+			width: 20%;
+			border: none;
+			background-color: #D9D9D9;
+			padding: 10px;
+		}
+
+		.content {
+			list-style-type: none;
+		}
+
+		.content > li {
+			padding: 15px 25px;
+			position: relative;
+		}
+
+		.close {
+			position: absolute;
+			right: 15px;
+			color: #888888;
+		}
+
+		.content > li:nth-child(odd) {
+			background-color: #F9F9F9;
+		}
+
+		.content > li:nth-child(even) {
+			background-color: #EEEEEE;
+		}
+
+		.content > li.checked {
+			background-color: #888888;
+			text-decoration: line-through;
+			color: white;
+		}
+
+		.content > li.checked > .close {
+			color: white;
+		}
+
+		li.checked:before{
+			font-family: "fontawesome";
+			content: "\f00c";
+			position: absolute;
+			left: 5px;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<div class="wrap">
+			<div class="header">
+				<h1 class="title">My To Do List</h1>
+				<div class="text-bar">
+					<input type="text" placeholder="Title..." class="text">
+					<button class="add">Add</button>
+				</div>
+			</div>
+			<div class="body">
+				<ul class="content">
+					<li>Hit The Gym <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span></li>
+					<li>Marry<span class="close"><i class="fa fa-times" aria-hidden="true"></i></span></li>
+					<li>Meet Girl Friend<span class="close"><i class="fa fa-times" aria-hidden="true"></i></span></li>
+					<li>Buy Eggs<span class="close"><i class="fa fa-times" aria-hidden="true"></i></span></li>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+	<script type="text/javascript">
+		$(".add").on("click", function(){
+			let newContent = $(".text").val();
+			$(".content").append(`
+					<li>${newContent}<span class="close"><i class="fa fa-times" aria-hidden="true"></i></span></li>
+				`);
+			$(".text").val('');
+		});
+
+		$(".content").on("click", "li", function(){
+			$(this).toggleClass("checked");
+		})
+
+		$(".content").on("click", "span", function(){
+			$(this).parent("li").remove();
+		})
+	</script>
+</body>
+</html>

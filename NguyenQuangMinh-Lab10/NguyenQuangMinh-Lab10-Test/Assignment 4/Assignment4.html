@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Assignment4.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Student Management System</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3 class-list">
+            <h2>Class list</h2>
+            <ul id="class-list"></ul>
+          </div>
+
+          <div class="col-9">
+            <div class="detail">
+              <div class="detail-bar">
+                <p class="detail-title">Edit student's information</p>
+                <form class="info">
+                  <div class="form-row justify-content-around">
+                    <div class="col-1">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="ID"
+                      />
+                    </div>
+                    <div class="col-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Full Name"
+                      />
+                    </div>
+                    <div class="col-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="col-2">
+                      <select class="form-control" required>
+                        <option value="">Class</option>
+                      </select>
+                    </div>
+                    <div class="col-2">
+                      <button type="submit" class="btn btn-primary">
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form-row justify-content-around button">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary">
+                      Delete
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="student-list">
+                <p class="detail-title">Student List</p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Full Name</th>
+                      <th scope="col">Student ID</th>
+                      <th scope="col">Function</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      let classList;
+      let class1 = [];
+      let class2 = [];
+      let class3 = [];
+
+      $(document).ready(function () {
+        $.get(
+          "http://139.180.213.49/getdata-student.php",
+          { Type: "Class" },
+          function (data) {
+            classList = data;
+            let string = "";
+            for (var i = 0; i < data.length; i++) {
+              string += `
+                    <li id="${data[i]}" onclick="updateTable(class${i + 1})">${
+                data[i]
+              }</li>
+                `;
+            }
+            $("#class-list").append(string);
+          },
+          "json"
+        );
+
+        $.get(
+          "http://139.180.213.49/getdata-student.php",
+          { Type: "Student" },
+          function (data) {
+            let string = "";
+            let i = 1;
+            for (const element of data) {
+              if (element.Class === "Class 1") {
+                class1.splice(class1.length, 0, element);
+              } else if (element.Class === "Class 2") {
+                class2.splice(class2.length, 0, element);
+              } else if (element.Class === "Class 3") {
+                class3.splice(class3.length, 0, element);
+              }
+            }
+            $(".table").append(string);
+          },
+          "json"
+        );
+      });
+
+      //Show list
+      const updateTable = (array) => {
+        $(".table").empty();
+        let string = `<thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Full Name</th>
+                      <th scope="col">Student ID</th>
+                      <th scope="col">Function</th>
+                    </tr>
+                  </thead>`;
+        let i = 1;
+        for (const element of array) {
+          string += `
+                    <tr>
+                    <th scope="row">${i++}</th>
+                    <td>${element.Name}</td>
+                    <td>${element.Email}</td>
+                    <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                    </td>
+                    </tr>
+                `;
+        }
+        $(".table").append(string);
+      };
+    </script>
+  </body>
+</html>

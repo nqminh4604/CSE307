@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    border-left: 3px solid lightgrey;
+}
+
+.title {
+    display: inline-block;
+}
+
+.class-list {
+    border: 1px solid black;
+
+}
+
+#class-list{
+    padding-left: 30px;
+}
+
+.detail {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.detail-bar {
+    border: 1px solid black;
+    margin-bottom: 20px ;
+}
+
+.detail-title {
+    background-color: lightgrey;
+    border-bottom: 1px solid grey;
+    padding: 5px 20px;
+}
+
+.info {
+    padding: 10px;
+    text-align: center;
+}
+
+.edit, .delete {
+    padding: 0px 20px;
+    background-color: white;
+    border: none;
+    height: 100%;
+}
+
+.button {
+    padding: 10px;
+}

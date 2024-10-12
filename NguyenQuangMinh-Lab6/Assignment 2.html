@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"  crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.main {
+			margin-top: 10px;
+			background-color: #F8F8F8;
+			border: 1px solid black;
+		}
+
+		.home {
+			margin-top: 30px;
+		}
+
+		.home > a {
+			text-decoration: none;
+			color: black;
+			display: inline-block;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		.fa-home {
+			font-size: 25px;
+			color: yellow;
+			margin-right: 5px;
+		}
+
+		.left {
+			padding-left: 3px;
+		}
+
+		.main-catagories > li{
+			list-style-type: none;
+			margin-top: 20px;
+		}
+
+		.sub-catagories {
+			list-style-type: none;
+		}
+
+		.main-catagories > li > a{
+			color: red;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		.sub-catagories > li > a{
+			text-decoration: none;
+			color: gray;
+		}
+
+		.middle {
+			background-color: white;
+			margin-bottom: 30px;
+			border: 1px solid black;
+			padding-bottom: 50px;
+			margin-top: 3px;
+		}
+
+		.middle-header {
+			border-bottom: 3px solid lightgrey;
+			padding: 20px 0px 10px;
+		}
+
+		.next-button, .previous-button {
+			width: 150px;
+			background-color: white;
+			border: 3px solid black;
+			position: relative;
+		}
+
+		.previous-button:before {
+			font-family: "fontawesome";
+			content: "\f0d9";
+			position: absolute;
+			left: 10px;			
+		}
+
+		.next-button:after {
+			font-family: "fontawesome";
+			content: "\f0da";
+			position: absolute;
+			right: 10px;	
+		}
+
+		.css-img {
+			width: 100px;
+		}
+
+		.media-body > h6 {
+			font-weight: bold;
+		}
+
+		.media-body > p {
+		}
+
+		.middle-content {
+			padding-bottom: 20px;
+			font-weight: bold;
+		}
+
+		.media-body > a {
+			color: red;
+			text-decoration: underline;
+		}
+
+		.middle-content > a {
+			color: red;
+			text-decoration: underline;
+		}
+
+		.middle-content > h6 {
+			font-weight: bold;
+			color: white;
+			width: 100%;
+			background-color: grey;
+			padding-left: 5px;
+			margin-top: 5px;
+		}
+
+		.footer-middle {
+			border-bottom: 3px solid lightgrey;
+			padding: 10px 0px;
+			border-top: 3px solid lightgrey;
+		}
+
+		.right {
+			padding-left: 3px;
+			padding-right: 3px;
+			padding-top: 3px;
+			padding-bottom: 20px;
+			text-align: center;
+		}
+
+		.right-content {
+			background-color: white;
+			border: 1px solid grey;
+			padding-bottom: 3px;
+			margin-bottom: 3px;
+		}
+
+		.right-content > h5 {
+			width: 100%;
+			background-color: grey;
+			color: white;
+		}
+
+		.right-content > input {
+			display: inline-block;
+			width: 120px;
+		}
+
+		.right-content > button {
+			width: 25px;
+			border-radius: 5px;
+		}
+
+		.right-content > a {
+			color: red;
+			text-decoration: underline;
+			font-weight: bold;
+			font-size: 15px;
+		}
+	</style>
+
+	<title>Assignment 2</title>
+</head>
+<body>
+	<main>
+		<div class="main container">
+			<div class="row">
+				<div class="left col-2">
+					<div class="home">
+						<i class="fa fa-home" aria-hidden="true"></i>
+						<a href="#">HOME</a>
+					</div>	
+
+					<div class="middle-left">
+						<ul class="main-catagories">
+							<li>
+								<a href="#">CSS Basic</a>
+								<ul class="sub-catagories">
+									<li><a href="#">CSS Introduction</a></li>
+									<li><a href="#">CSS Syntax</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">CSS Advanced</a>
+								<ul class="sub-catagories">
+									<li><a href="#">CSS Dimension</a></li>
+									<li><a href="#">CSS Classification</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="middle col-8">
+					<div class="middle-header">
+						<h3 class="title">
+							CSS Tutorial
+						</h3>
+						<button class="previous-button">
+							Previous
+						</button>
+						<button class="next-button">
+							Next
+						</button>
+					</div>
+
+					<div class="middle-middle">
+						<div class="middle-content">
+							<h6 class="middle-title">
+								CSS Tutorial
+							</h6>
+							<div class="media">
+								<img src="img/css.png" class="mr-3 css-img" alt="...">
+								<div class="media-body">
+									<h6 class="mt-0">Save a lot of work with CSS!</h6>
+									<p>In our CSS tutorial you will learn how to use CSS to control the style and layout of multiple Web pages all at
+									once.</p>
+									<a href="#">Start learning CSS!</a>
+								</div>
+							</div>
+						</div>
+						<div class="middle-content">
+							<h6 class="middle-title">
+								CSS example
+							</h6>
+							<p>Learn by 70 examples! With your editor, you can edit CSS, and click on a test button to view the result.</p>
+							<a href="#">Try it yourself!</a>
+						</div>
+					</div>
+
+					<div class="footer-middle">
+						<button class="previous-button">
+							Previous
+						</button>
+						<button class="next-button">
+							Next
+						</button>
+					</div>
+				</div>
+
+				<div class="right col-2">
+					<div class="right-content search">
+						<h5>
+							SITE SEARCH
+						</h5>
+						<input type="text">
+						<button>...</button>
+						<a href="#" class="link">
+							About W3Schools W3Schools Forum
+						</a>
+					</div>
+					<div class="right-content search">
+						<h5>
+							WEB HOSTING
+						</h5>
+						<a href="#" class="link">
+							$15 Domain Names Registration Save $20 / year!
+						</a>
+					</div>
+					<div class="right-content search">
+						<a href="#" class="link">
+							UK Domain Names UK Web Hosting Alojamiento Web
+						</a>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>

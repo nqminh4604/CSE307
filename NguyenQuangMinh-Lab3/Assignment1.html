@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 1</title>
+
+	<!-- CSS -->
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		main {
+			border: solid 1px #000;
+			padding-bottom: 10px;
+			padding-top: 0px;
+		}
+
+		.title {
+			background-color: #ccc;
+			margin: 0px;
+
+		}
+
+		h3 {
+			padding-left: 5px;
+		}
+
+		form {
+			margin-top: 10px;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			width: 100%;
+			padding-left: 5px;
+			height: 25px;
+		}
+
+		.item-1 {
+			box-sizing: border-box;
+			width: 22%;
+			height: 100%;
+		}
+
+		.item-5 {
+			box-sizing: border-box;
+			width: 12%;
+			height: 100%;
+		}
+
+		input {
+			height: 100%;
+			padding-left: 5px;
+		}
+
+		button {
+			height: 100%;
+			width: 50px;
+			text-align: center;
+		}
+
+		select {
+			height: 100%;
+			width: 170px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<main>	
+		<div class="title">
+			<h3>Add a new Student</h3>
+		</div>
+
+		<form>
+			<div class="flex-container">
+				<div class="item-1"><input type="text" name="firstName" placeholder="First name"></div>
+				<div class="item-1"><input type="text" name="lastName" placeholder="Last name"></div>
+				<div class="item-1"><input type="email" name="email" placeholder="Email"></div>
+				<div class="item-1">
+					<select name="Class">
+						<option value="Value 1" selected>Class 1</option>
+						<option value="Value 2">Class 2</option>
+						<option value="Value 3">Class 3</option>
+					</select>
+				</div>
+				<div class="item-2"><button type="button">Add</button></div>
+			</div>
+		</form>
+	</main>
+</body>
+</html>

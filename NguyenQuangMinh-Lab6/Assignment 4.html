@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 4</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"  crossorigin="anonymous">
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		body {
+			padding-top: 20px;
+		}
+
+		.header {
+			border-bottom: 1px solid grey;
+			height: 44px;
+		}
+
+		.title {
+			color: grey;
+			border-bottom: 5px solid orange;
+			display: inline-block;
+		}
+
+		.item {
+			width: 250px;
+			margin: 30px;
+		}
+
+		.product-img {
+			border: 1px solid grey;
+			text-align: center;
+			width: 100%;
+			position: relative;
+		}
+
+		.img {
+			width: 100%;
+		}
+
+		.describe {
+			text-align: center;
+		}
+
+		.product-name {
+			font-size: 18px;
+		}
+
+		.hotline {
+			font-weight: bold;
+			color: red;
+		}
+
+		.item:hover > .product-img > .overplay-product {
+			display: block;
+		}
+
+		.overplay-product {
+			display: none;
+			border: 1px solid orange;
+			flex-wrap: wrap;
+			position: absolute;
+			justify-content: center;
+			align-content: center;
+			background-color: rgba(255, 255, 255, 0.4);
+			height: 248px;
+			width: 248px;
+			top: 0px;
+		}
+
+		.button {
+			background-color: orange;
+			border: none;
+			color: white;
+			font-weight: bold;
+			width: 130px;
+			height: 30px;
+			margin: 10px;
+			top: -250;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="header">
+				<h2 class="title">TỔNG ĐÀI IP</h2>
+			</div>
+			<div class="row">
+				
+				<div class="item">
+					<div class="product-img">
+						<img src="img/product-1.jpg" class="img">
+						<div class="overplay-product">
+							<button class="button">ĐẶT HÀNG</button>
+							<button class="button">CHI TIẾT</button>
+						</div>
+					</div>
+
+					<div class="describe">
+						<h4 class="product-name">Tổng đài IP Xorcom Spark - CSX1000/NU</h4>
+						<span class="hotline">Vui lòng gọi (028) 7302 8080</span>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="product-img">
+						<img src="img/product-2.jpg" class="img">
+						<div class="overplay-product">
+							<button class="button">ĐẶT HÀNG</button>
+							<button class="button">CHI TIẾT</button>
+						</div>
+					</div>
+
+					<div class="describe">
+						<h4 class="product-name">Tổng đài IP Xorcom Spark - CSX1000</h4>
+						<span class="hotline">Vui lòng gọi (028) 7302 8080</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>

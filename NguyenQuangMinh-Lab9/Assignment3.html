@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 3</title>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		main {
+			display: flex;
+			justify-content: center;
+		}
+
+		td {
+			padding: 3px;
+		}
+
+		input, textarea {
+			padding: 3px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		select {
+			padding: 3px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.radio {
+			display: inline-block;
+			width: 15px;
+		}
+
+		.button {
+			text-align: center;
+		}
+
+		.button > td > button {
+			padding: 10px 20px;
+		}
+
+		.error {
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<form class="form">
+			<table border="1px" width="500px">
+				<colgroup>
+					<col width="30%">
+					<col width="70%">
+				</colgroup>
+
+				<tr>
+					<th><label for="fullName">Full Name*</label></th>
+					<td><input type="text" name="fullName" id="fullName" placeholder="Enter your fullName"></td>
+				</tr>
+				<tr>
+					<th><label for="email">Email*</label></th>
+					<td><input type="email" name="email" id="email" placeholder="Enter your email"></td>
+				</tr>
+				<tr>
+					<th><label for="password">Password*</label></th>
+					<td><input type="password" name="password" id="password" placeholder="Enter your password" ></td>
+				</tr>
+				<tr>
+					<th><label for="confirmPassword">Confirm Password*</label></th>
+					<td><input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter your password again"></td>
+				</tr>
+				<tr>
+					<th><label for="phoneNumber">Phone Number*</label></th>
+					<td><input type="tel" name="phoneNumber" placeholder="Enter your phone number (only numbers)"></td>
+				</tr>
+				<tr class="address textarea">
+					<th><label for="address">Address</label></th>
+					<td><textarea id="comment" maxlength="100" rows="3"></textarea></td>
+				</tr>
+				<tr>
+					<th><label for="city">City</label></th>
+					<td><input type="text" name="city" id="city" placeholder="Enter your city"></td>
+				</tr>
+				<tr>
+					<th><label for="zip">Zip/Postal Code</label></th>
+					<td><input type="text" name="zip" id="zip" placeholder="Enter your Zip/Postal Code"></td>
+				</tr>
+				<tr>
+					<th><label for="country">Country</label></th>
+					<td><select id="country">
+						<option value="1" selected>[Select your conutry]</option>
+						<option value="2">...</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th><label for="birthday">Birthday</label></th>
+					<td><input type="text" name="birthday" id="birthday" placeholder="mm/dd/yyyy"></td>
+				</tr>
+				<tr>
+					<th><label for="gender">Gender</label></th>
+					<td><select id="gender">
+						<option value="1" selected>Male</option>
+						<option value="2">Female</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th><label for="startingDate">Starting date</label></th>
+					<td>
+						<input class="radio" type="radio" name="startingDate" value="spring" id="spring">
+						<label for="spring">Spring</label>
+						<input class="radio" type="radio" name="startingDate" value="summer" id="summer" checked>
+						<label for="summer">Summer</label>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="comment">Comments</label></th>
+					<td><textarea id="comment" maxlength="100" rows="3" placeholder="Please send us more information"></textarea></td>
+				</tr>
+				<tr class="button">
+					<td colspan="2"><button type="button">Submit</button></td>
+				</tr>
+
+			</table>
+		</form>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+	<script type="text/javascript">
+		$(".form").validate({
+			rules: {
+				fullName: "required",
+				email: {
+					required: true,
+					email: true
+				},
+				password: {
+					required: true,
+					minlength: 6
+				},
+				confirmPassword: {
+					required: true,
+					minlength: 6,
+					equalTo: "password"
+				},
+				phoneNumber: {
+					required: true,
+					minlength: 10,
+					maxlength: 10
+				}
+
+			},
+			messages: {
+				fullName: "Please input your name",
+				email: {
+					required: "Please input your email",
+					email: "Your email address must be in the format of name@domain.com"
+				},
+				password: {
+					required: "Please input your password (min-length = 6)",
+					minlength: "Your password must have min-length: 6"
+				},	
+				ConfirmPassword: {
+					required: "Please input your password again",
+					minlength: "Your password must have min-length: 6",
+					equalTo: "It does not match your password"
+				},
+				phoneNumber: {
+					required: "Please input your phone number",
+					minlength: "Your phone number must have 10 numbers",
+					maxlength: "Your phone number must have 10 numbers"
+				}
+			}
+		});
+	</script>
+
+</body>
+</html>

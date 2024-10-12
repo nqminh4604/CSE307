@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+</head>
+
+<body>
+
+    <script>
+        // create object
+        function Product(id, name, quantity, price, img) {
+            this.id = id;
+            this.name = name;
+            this.image = img;
+            this.price = price;
+            this.quantity = quantity;
+        };
+
+        //create the array
+        const products = [
+            new Product("4", "d", "10", "30", "#"),
+            new Product("5", "e", "10", "240", "#"),
+            new Product("6", "f", "10", "1130", "#"),
+            new Product("1", "a", "10", "100", "#"),
+            new Product("2", "b", "10", "400", "#"),
+            new Product("3", "c", "10", "20", "#")
+        ];
+
+        //Sort function
+        products.sort((a, b) => {
+            let x = a.name.toLowerCase();
+            let y = b.name.toLowerCase();
+            if (x < y) {return -1;}
+            if (x < y) {return 1}
+            return 0;
+            });
+
+        //Add at head
+        products.splice(0, 0, new Product("7", "head", "10", "20", "#"));
+        //Add at tail
+        products.splice(products.length, 0, new Product("10", "last", "10", "20", "#"));
+
+        //Show array
+        for (let product of products) {
+            console.log(product);
+        }
+
+        //Search function
+        const searchByName = (productName, products) => {
+            for (product of products) {
+                if (product.name === productName) {
+                    return product;
+                }
+            }
+            return "none";
+        }
+
+        //Use search function
+        console.log("Search a product by the name f: ");
+        console.log(searchByName("f", products));
+
+        //Remove function
+        const removeByName = (productName, products) => {
+            for (var i = 0; i < products.length; i++) {
+                if (products[i].name === productName) {
+                    products.splice(i, 1);
+                }
+            }
+            return "none";
+        };
+
+        //Test remove function
+        console.log("Remove...")
+        removeByName("last", products);
+        //Show array
+        for (let product of products) {
+            console.log(product);
+        }
+
+        //Edit function
+        const editById = (productId, products, productName, productQuantity, productPrice, productImage) => {
+            for (var product of products) {
+                if (product.id === productId) {
+                    product.name = productName;
+                    product.quantity = productQuantity;
+                    product.price = productPrice;
+                    product.image = productImage;
+                }
+            }
+        };
+
+        //Test edit function
+        console.log("Edit head:");
+        editById("7", products, "New", "New", "New", "New");
+        console.log(products[0]);
+
+    </script>
+
+</body>
+
+</html>

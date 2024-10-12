@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lani & Dani</title>
+	<link rel="icon" type="image/x-logo" href="images/fav.png">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+	<header>
+		<div class="menu">
+			<img src="images/logo.png" alt="Lani & Dani Golf" loading="lazy" width="100px">
+			<nav>	
+				<ul class="main-menu">
+					<li><a href="#">Trang chủ</a></li>
+					<li><a href="#">Dịch vụ Golf</a></li>
+					<li><a href="#">Dịch vụ khác</a></li>
+					<li class="has-children"><a href="#">Tin tức</a>
+						<ul class="sub-menu">
+							<li><a href="#">Thiết kế xây dựng</a></li>
+							<li><a href="#">Chăm sóc sân cỏ</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Công trình</a></li>
+					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="#">Liên hệ</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<img src="images/slider-1.jpg" style="max-width: 100%; width: 100%;" id="slider">
+
+	<script type="text/javascript">
+		function ChangeImage()
+		{
+			let sliderEL = document.querySelector("#slider");
+			
+			sliderEL.src = "images/slider-1.jpg";
+		}
+		setTimeout(ChangeImage, 3000);
+	</script>
+
+	<main>
+		<section class="introduction">
+			<div class="introduction-text">
+				<h4>Chúng tôi là ai?</h4>
+				<h1 class="introduction-title">Công ty LANI & Dani</h1>
+				<p><b>Tự hào là công ty đầu tiên tại Việt Nam cung cấp dịch vụ trọn gói</b> trong 
+					lĩnh vực tư vấn, thiết kế xây dựng sân Golf, cung ứng nguồn nhân lực, dịch vụ
+				huấn luyện, quản lí và hậu cần cho sân Golf.</p>
+				<p>Chúng tôi còn hoạt động trong lĩnh vực xây lắp và đầu tư xây dựng các công 
+					trình dân dụng, nhà xưởng công nghiệp, công trình hạ tầng kỹ thuật, đường
+				giao thông, cầu cảng, bờ kè, cầu cống, nạo vét sông rạch, xây dựng các công trình thủy lợi, thi công san lấp mặt bằng, sản xuất và kinh doanh vật liệu xây dựng.</p>
+			</div>
+
+			<div class="introduction-images">
+				<img src="images/introduction-girl.jpg" alt="golf girl is posing in the golf" loading="lazy" width="200px">
+				<img src="images/introduction-man.jpg" alt="golf man is hitting the golf" loading="lazy" width="200px">
+			</div>
+		</section>
+
+		<section class="golf-service">
+			<div class="golf-service-overplay">
+				
+				<div class="golf-service-text">
+					<h4>Chuyên gia hàng đầu</h4>
+					<h2 class="golf-service-title">Dịch Vụ Sân Golf </h2>
+					<p>Với đội ngũ thiết kế và xây dựng chuyên nghiệp, <b>Lani & Dani</b> đảm bảo sẽ mang lại những sân golf chất lượng cao, đầy thú vị và thử thách, phù hợp cho các golf thủ ở tất cả các mức kỹ năng</p>
+				</div>
+
+				<div class="service-item-container">
+					<div class="item">
+						<article class="golf-service-item">
+							<a href="#"><img src="images/service-design.jpg" alt="golf design map" loading="lazy" width="200px"></a>
+							<a href="#"><h3>Thiết kế </h3></a>
+							<p>Đội ngũ thiết kế sân golf hơn 10 năm kinh nghiệm, thi công đạt tiêu chuẩn quốc tế.</p>
+						</article>
+					</div>
+					<div class="item">
+						<article class="golf-service-item">
+							<a href="#"><img src="images/service-design.jpg" alt="golf design map" loading="lazy" width="200px"></a>
+							<a href="#"><h3>Thiết kế </h3></a>
+							<p>Đội ngũ thiết kế sân golf hơn 10 năm kinh nghiệm, thi công đạt tiêu chuẩn quốc tế.</p>
+						</article>
+					</div>
+					<div class="item">
+						<article class="golf-service-item">
+							<a href="#"><img src="images/service-design.jpg" alt="golf design map" loading="lazy" width="200px"></a>
+							<a href="#"><h3>Thiết kế </h3></a>
+							<p>Đội ngũ thiết kế sân golf hơn 10 năm kinh nghiệm, thi công đạt tiêu chuẩn quốc tế.</p>
+						</article>
+					</div>
+					<div class="item">
+						<article class="golf-service-item">
+							<a href="#"><img src="images/service-design.jpg" alt="golf design map" loading="lazy" width="200px"></a>
+							<div class="service-contain-group">
+								<a href="#"><h3>Thiết kế </h3></a>
+								<p>Đội ngũ thiết kế sân golf hơn 10 năm kinh nghiệm, thi công đạt tiêu chuẩn quốc tế.</p>
+							</div>
+						</article>
+					</div>
+					<div class="item">
+						<article class="golf-service-item">
+							<a href="#"><img src="images/service-design.jpg" alt="golf design map" loading="lazy" width="200px"></a>
+							<a href="#"><h3>Thiết kế </h3></a>
+							<p>Đội ngũ thiết kế sân golf hơn 10 năm kinh nghiệm, thi công đạt tiêu chuẩn quốc tế.</p>
+						</article>
+					</div>
+					<div class="item">
+						<article class="golf-service-item">
+							<a href="#"><img src="images/service-design.jpg" alt="golf design map" loading="lazy" width="200px"></a>
+							<a href="#"><h3>Thiết kế </h3></a>
+							<p>Đội ngũ thiết kế sân golf hơn 10 năm kinh nghiệm, thi công đạt tiêu chuẩn quốc tế.</p>
+						</article>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+		<section class="Other_Service">
+			<h4>
+				Uy tín và Chuyên nghiệp 
+			</h4>
+			<h2>Các dịch vụ </h2>
+			<p>Với định hướng phát triển đa ngành nghề, ngoài lĩnh vực sân Golf, Công ty TNHH LANI&DANI còn tập trung hoạt động kinh doanh trong các lĩnh vực dưới đây</p>
+
+			<div class="other service square">
+				<img src="images/house.png" alt="house bulding" loading="lazy" width="100px">
+				<p>Xây dựng nhà ở </p>
+			</div>
+
+		</section>
+
+		<section class="consulting">
+			<div class="consulting-overlay">
+				<div class="consulting-question">
+					<img src="images/Consultant.png" width="100px">
+					<h2>Bạn cần tư vấn?</h2>
+					<p>Đừng ngần ngại, hãy liên hệ ngay với LaniDani để được tư vấn hoàn toàn miễn phí và báo giá tốt nhất dành riêng cho bạn.</p>
+				</div>
+
+				<div>
+					<form>
+						<input type="text" name="FullName" placeholder=" Tên của bạn" id="FullName">
+						<br>
+						<input type="email" name="Email" placeholder=" Email của bạn">
+						<br>
+						<input type="tel" name="PhoneNumber" placeholder=" Số điện thoại">
+						<br>
+						<textarea name="content" placeholder=" Nội dung" rows="5px" cols="30px"></textarea>
+						<br>
+						<button type="submit">Gửi</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="news">
+			<div>
+				<p>Cập nhật hàng ngày</p>
+				<h2 class="news-title">Tin Tức - Hoạt Động</h2>
+
+				<div class="news-main">
+					<article>
+						<img src="images/news-1.jpg" alt="golf grass park" loading="lazy" width="100px">
+						<p>Những lưu ý quan trọng trong cách chọn giày golf cho nam</p>
+						<p>Theo chân những golfer nam ra sân đó chính là đôi giày. 
+							Làm thế nào để có đôi giày mang êm chân trong suốt 4-5 và 
+						tạo ra sự [...]</p>
+
+					</article>
+				</div>
+
+				<div class="news-relative">
+					<article>
+						<img src="images/news-3.jpg" alt="golf grass park" loading="lazy" width="100px">
+						<h5>TƯ VẤN GOLF</h5>
+						<p>Golf Course là gì? Có bao nhiêu Golf Course?</p>
+					</article>
+				</div>
+
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<section>
+			<div>
+				<img src="images/logo.png" alt="lani vani logo" loading="lazy" width="100px">
+				<p>
+					Lani & Dani là công ty hoạt động đa ngành, đa 
+					lĩnh vực, với chủ lực là thiết kế đầu tư sân golf,
+					quy hoạch cụm dân cư, khu đô thị, khu đô thị 
+					mới hoàn chỉnh.
+				</p>
+			</div>
+
+			<div>
+				<h3>Liên hệ</h3>
+
+				<h4>Địa chỉ</h4>
+				<p>202 Nguyễn Văn Hưởng, P.Thảo Điền, 
+				TP.Thủ Đức, TP.</p>
+
+				<h4>Điện thoại</h4>
+				<p>0989 368 880</p>
+
+				<h4>Email</h4>
+				<p>info@lanidani.com</p>
+			</div>
+
+			<div>
+				<h3>Tin tức</h3>
+
+				<ul>
+					<li>Kỹ thuật Golf</li>
+					<li>Giải đấu Golf</li>
+					<li>Tư vấn Golf</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<div>Copyright 2021 &copy; <b>LANI & DANI Company</b></div>
+		</section>
+
+	</footer>
+
+	<div class="go-to-top">
+		^
+	</div>
+
+</body>
+</html>

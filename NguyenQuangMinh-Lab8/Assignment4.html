@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+
+    <style type="text/css">
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1px solid black" cellspacing="0px">
+        <thead>
+            <tr>
+                <th>str</th>
+                <th>parseInt(str)</th>
+                <th>parseFloat(str)</th>
+                <th>Number(str)</th>
+                <th>+str</th>
+                <th>str | 0</th>
+            </tr>    
+        </thead>
+
+        <tbody>
+            <tr>
+               <td class="str-1">1234</td> 
+               <td class="parseInt-1"></td>
+               <td class="parseFloat-1"></td>
+               <td class="number-1"></td>
+               <td class="joinStr-1"></td>
+               <td class="idk-1"></td>
+            </tr>
+            <tr>
+               <td class="str-2">1234abcd</td> 
+               <td class="parseInt-2"></td>
+               <td class="parseFloat-2"></td>
+               <td class="number-2"></td>
+               <td class="joinStr-2"></td>
+               <td class="idk-2"></td>
+            </tr>
+            <tr>
+               <td class="str-3">0.15</td> 
+               <td class="parseInt-3"></td>
+               <td class="parseFloat-3"></td>
+               <td class="number-3"></td>
+               <td class="joinStr-3"></td>
+               <td class="idk-3"></td>
+            </tr>
+            <tr>
+               <td class="str-4">3.14ivan</td> 
+               <td class="parseInt-4"></td>
+               <td class="parseFloat-4"></td>
+               <td class="number-4"></td>
+               <td class="joinStr-4"></td>
+               <td class="idk-4"></td>
+            </tr>
+            <tr>
+               <td class="str-5">Infinity</td> 
+               <td class="parseInt-5"></td>
+               <td class="parseFloat-5"></td>
+               <td class="number-5"></td>
+               <td class="joinStr-5"></td>
+               <td class="idk-5"></td>
+            </tr>
+            <tr>
+               <td class="str-6">99999999999999999999</td> 
+               <td class="parseInt-6"></td>
+               <td class="parseFloat-6"></td>
+               <td class="number-6"></td>
+               <td class="joinStr-6"></td>
+               <td class="idk-6"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const parInt = (i, string) => {
+            document.querySelector(".parseInt-" + i).innerHTML = parseInt(string);
+        }
+
+        const parFloat = (i, string) => {
+            document.querySelector(".parseFloat-" + i).innerHTML = parseFloat(string);
+        }
+
+        const number = (i, string) => {
+            document.querySelector(".number-" + i).innerHTML = Number(string);
+        }
+
+        const joinStr = (i, string) => {
+            document.querySelector(".joinStr-" + i).innerHTML = string + string;
+        }
+
+        const idk = (i, string) => {
+            document.querySelector(".idk-" + i).innerHTML = string | 0;
+        }
+
+        for (var i = 1; i <= 6; i++) {
+            var string = document.querySelector(".str-" + i).innerHTML;
+            parInt(i, string);
+            parFloat(i, string);   
+            number(i, string);
+            joinStr(i, string);
+            idk(i, string);
+        }
+
+    </script>
+
+</body>
+
+</html>

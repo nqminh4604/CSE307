@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 2</title>
+
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.textarea {
+			height: 60px;
+		}
+
+		textarea {
+			margin-bottom: 5px;
+			margin-left: 5px;
+			margin-top: 5px;
+			width: 80%;
+		}
+
+		input {
+			border: 1px;
+			box-sizing: border-box;
+			width: 100%;
+			padding: 3px 5px;
+		}
+
+		.radio {
+			box-sizing: border-box;
+			width: 5%;
+		}
+
+		button {
+			box-sizing: border-box;
+			border-radius: 10px;
+			border: 1px;
+			width: 12%;
+			color: #FFF;
+			background-color: #6AA2D7;
+			height: 20px;
+			display: inline;
+		}
+
+		.button {
+			text-align: center;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<form>
+			<table border="1px" width="60%">
+				<colgroup>
+					<col width="30%">
+					<col width="70%">
+				</colgroup>
+
+				<tr>
+					<th><label for="fullName">Full Name*</label></th>
+					<td><input type="text" name="fullName" id="fullName"></td>
+				</tr>
+				<tr>
+					<th><label for="email">Email*</label></th>
+					<td><input type="email" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<th><label for="password">Password*</label></th>
+					<td><input type="password" name="password" id="password" placeholder="Enter your password" ></td>
+				</tr>
+				<tr>
+					<th><label for="confirmPassword">Confirm Password*</label></th>
+					<td><input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter your password again"></td>
+				</tr>
+				<tr class="address textarea">
+					<th><label for="address">Address</label></th>
+					<td><textarea id="comment" maxlength="100" rows="3"></textarea></td>
+				</tr>
+				<tr>
+					<th><label for="city">City</label></th>
+					<td><input type="text" name="city" id="city" placeholder="Enter your city"></td>
+				</tr>
+				<tr>
+					<th><label for="zip">Zip/Postal Code</label></th>
+					<td><input type="text" name="zip" id="zip" placeholder="Enter your Zip/Postal Code"></td>
+				</tr>
+				<tr>
+					<th><label for="country">Country</label></th>
+					<td><select id="country">
+						<option value="1" selected>[Select your conutry]</option>
+						<option value="2">...</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th><label for="birthday">Birthday</label></th>
+					<td><input type="text" name="birthday" id="birthday" placeholder="mm/dd/yyyy"></td>
+				</tr>
+				<tr>
+					<th><label for="gender">Gender</label></th>
+					<td><select id="gender">
+						<option value="1" selected>Male</option>
+						<option value="2">Female</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th><label for="startingDate">Starting date</label></th>
+					<td>
+						<input class="radio" type="radio" name="startingDate" value="spring" id="spring">
+						<label for="spring">Spring</label>
+						<input class="radio" type="radio" name="startingDate" value="summer" id="summer" checked>
+						<label for="summer">Summer</label>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="comment">Comments</label></th>
+					<td><textarea id="comment" maxlength="100" rows="3" placeholder="Please send us more information"></textarea></td>
+				</tr>
+				<tr class="button">
+					<td colspan="2"><button type="button">Submit</button></td>
+				</tr>
+
+			</table>
+		</form>
+	</main>
+</body>
+</html>

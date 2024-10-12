@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 5.2</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.side-bar {
+			width: 320px;
+			height: 600px;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 1px solid lightgrey;
+			position: relative;
+		}
+
+		.script {
+			padding: 20px 10px;
+		}
+
+		.title {
+			margin-bottom: 20px;
+		}
+
+		.guide {
+			color: grey;
+		}
+
+		.open-side {
+			font-size: 25px;
+			padding-left: 10px;
+		}
+
+		.open-text {
+			display: inline-block;
+			font-weight: lighter;
+		}
+
+		.overlay {
+			align-content: center;
+			background-color: rgba(0, 0, 0, 0.9);
+			color: grey;
+			font-size: 28px;
+			position: absolute;
+			height: 600px;
+			width: 320px;
+		}
+
+		.overlay > ul > li {
+			margin: 10px 5px;
+		}
+
+		.overlay:before {
+			font-family: "fontawesome";
+			content: "\f00d";
+			position: absolute;
+			top: 30px;
+			right: 30px;
+		}
+
+		.menu {
+			list-style-type: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="side-bar">
+			<div class="overlay">
+				<ul class="menu">
+					<li>About</li>
+					<li>Services</li>
+					<li>Clients</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+		<div class="script">
+			<h2 class="title">
+				Fullscreen Overlay Nav
+				Example
+			</h2>
+			<p class="guide">
+				Click on the element below to open the fullscreen 
+				overlay navigation menu.
+			</p>
+		</div>
+		<div class="open-side">
+			<i class="fa fa-bars" aria-hidden="true" class="open-icon"></i>
+			<h4 class="open-text">open</h4>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 1</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<style type="text/css">
+		.images {
+			display: flex;
+			justify-content: center;
+		}
+
+		.images img {
+			display: inline-block;
+			width: 200px;
+			height: 150px;
+			margin: 10px;
+		}
+
+		.show {
+			display: flex;
+			justify-content: center;
+		}
+
+		.wrapper > img {
+			display: inline-block;
+			width: 850px;
+			height: 500px;
+		}
+
+		.wrapper {
+			position: relative;
+		}
+
+		.close {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			font-size: 30px;
+			color: white;
+		}
+
+		p {
+			position: absolute;
+    		bottom: 10px;
+    		left: 20px;
+    		color: white;
+    		font-size: 30px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="images">
+		<div class="image">
+			<img src="img/img-1.jpg" class="img">
+		</div>
+		<div class="image">
+			<img src="img/img-2.jpg" class="img">
+		</div>
+		<div class="image">
+			<img src="img/img-3.jpg" class="img">
+		</div>
+		<div class="image">
+			<img src="img/img-4.jpg" class="img">
+		</div>
+	</div>
+	<div class="show">
+		<div class="wrapper">
+			<img src="img/img-1.jpg" class="display">
+			<i class="close fa fa-times" aria-hidden="true"></i>
+			<p>Northern Lights</p>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(".img").click(function () {
+			let img = $(this).attr("src");
+			$(".display").attr("src", img);
+			$(".show").show();
+		});
+
+		$(".close").click(function () {
+			$(".show").hide();
+		});
+	</script>
+
+</body>
+</html>

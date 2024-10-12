@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 1</title>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.pricing-table {
+			display: flex;
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;
+			padding: 40px 70px;
+			background-color: rgb(220, 220, 220, 1.0);
+			border-radius: 2px;
+			align-items: center;
+		}
+
+		.item {
+			border: 2px solid rgb(200, 200, 200, 1.0);
+			padding: 10px 20px;
+			background-color: white;
+			border-radius: 4px;
+			margin: 2px;
+		}
+
+		.title {
+			text-align: center;
+		}
+
+		.item-name {
+			color: deepskyblue;
+			font-weight: normal;
+		}
+
+		.price {
+			color: coral;
+			font-size: 30px;
+		}
+
+		.describe {
+			padding: 10px;
+			border-top: 1px solid lightgrey;
+			margin-top: 20px;
+		}
+
+		.text {
+			color: lightgrey;
+		}
+
+		.amount {
+			font-weight: normal;
+			color: black;
+			font-size: 25px;
+		}
+
+		.gb {
+			font-weight: normal;
+			font-size: 15px;
+			color: black;
+		}
+
+		.button {
+			padding: 10px 20px;
+			background-color: coral;
+			border-color: coral;
+			border-radius: 5px;
+			color: white;
+		}
+
+		.recommended-item {
+			border: 4px solid deepskyblue;
+			padding: 10px 20px;
+			padding-top: 0px;
+			background-color: white;
+			border-radius: 4px;
+			margin: 2px;
+		}
+
+		.recommended-tag {
+			text-align: center;
+			background-color: deepskyblue;
+			color: white;
+			border-radius: 4px;
+			margin-top: -3px;
+			margin-bottom: 10px;
+		}
+
+		.recommended-button {
+			padding: 10px 20px;
+			background-color: deepskyblue;
+			border-color: deepskyblue;
+			border-radius: 5px;
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="pricing-table">
+		<div class="item">
+			<div class="title">
+				<h2 class="item-name">Started</h2>
+				<h3 class="price">$19</h3>
+				<span class="text">per month</span>
+			</div>
+			<div class="describe">
+				<p class="text"><strong class="amount">2</strong> websites</p>
+				<p class="text"><strong class="amount">5</strong> <strong class="gb">GB</strong> storage</p>
+				<p class="text"><strong class="amount">3</strong> users</p>
+			</div>
+			<button type="button" class="button">Chose Plan</button>
+		</div>
+		<div class="recommended-item">
+			<div class="recommended-tag">
+				<span class="recommended">Recommended</span>
+			</div>
+			<div class="title">
+				<h2 class="item-name">Team</h2>
+				<h3 class="price">$49</h3>
+				<span class="text">per month</span>
+			</div>
+			<div class="describe">
+				<p class="text"><strong class="amount">5</strong> websites</p>
+				<p class="text"><strong class="amount">20</strong> <strong class="gb">GB</strong> storage</p>
+				<p class="text"><strong class="amount">10</strong> users</p>
+			</div>
+			<button type="button" class="recommended-button">Chose Plan</button>
+		</div>
+		<div class="item">
+			<div class="title">
+				<h2 class="item-name">Premium</h2>
+				<h3 class="price">$99</h3>
+				<span class="text">per month</span>
+			</div>
+			<div class="describe">
+				<p class="text"><strong class="amount">20</strong> websites</p>
+				<p class="text"><strong class="amount">50</strong> <strong class="gb">GB</strong> storage</p>
+				<p class="text"><strong class="amount">25</strong> users</p>
+			</div>
+			<button type="button" class="button">Chose Plan</button>
+		</div>
+		<div class="item">
+			<div class="title">
+				<h2 class="item-name">Corporate</h2>
+				<h3 class="price">$249</h3>
+				<span class="text">per month</span>
+			</div>
+			<div class="describe">
+				<p class="text"><strong class="amount">&infin;</strong> websites</p>
+				<p class="text"><strong class="amount">200</strong> <strong class="gb">GB</strong> storage</p>
+				<p class="text"><strong class="amount">&infin;</strong> users</p>
+			</div>
+			<button type="button" class="button">Chose Plan</button>
+		</div>
+		
+	</div>
+</body>
+</html>

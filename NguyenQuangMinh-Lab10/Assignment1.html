@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 1</title>
+
+	<!-- Boostraps: -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+	<!-- Jquery: -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+	<!-- Fontawesome: -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.launch-button {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+		}
+
+		.modal-dialog {
+			display: none;
+		}
+
+		.overlay {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.4);
+			top: 0px;
+			display: none;
+			align-content: center;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<button type="button" class="launch-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+			Vertically centered modal
+		</button>
+
+		<div class="overlay">
+			<div class="modal-dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Modal title</h5>
+							<button type="button" class="close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>Placeholder text for this demonstration of a vertically centered modal dialog.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="close-button btn btn-secondary">Close</button>
+							<button type="button" class="change-button btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		
+	</main>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".launch-button").click(function () {
+				$(".overlay").show();
+				$(".modal-dialog").show();
+
+			})
+
+			$(".close-button").click(function () {
+				$(".overlay").hide();
+				$(".modal-dialog").hide();
+			})
+
+			$(".change-button").click(function () {
+				$(".overlay").hide();
+				$(".modal-dialog").hide();
+			})
+		}
+		);
+
+	</script>
+
+</body>
+</html>

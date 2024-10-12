@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+</head>
+
+<body>
+
+    <script>
+        function Product(name, img, price) {
+            this.name = name;
+            this.image = img;
+            this.price = price;
+        };
+
+        const products = [
+            new Product("a", "none", "10"),
+            new Product("b", "none", "200"),
+            new Product("c", "none", "500"),
+            new Product("d", "none", "50"),
+        ];
+
+        products.sort((a, b) => { return a.price - b.price });
+
+        for (const element of products) {
+            console.log(element);
+        }
+    </script>
+
+</body>
+
+</html>
